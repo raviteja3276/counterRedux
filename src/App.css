@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8e8282;
+    height: 10%;
+    padding: 5px;
+}
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.productCard {
+    /* flex: 1 0 21%;  */
+    max-width: 21%; 
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    height: 200px; /* Set a fixed height for the product card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.productCard img {
+    max-width: 100%;
+  height: auto;
+  max-height: 150px; /* Optional: limit image height to fit within card */
+  }
+
+.cartCard img{
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+
+.cartCard {
+    /* flex: 1 0 21%;  */
+    max-width: 100%; 
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    height: 200px; /* Set a fixed height for the product card */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+  }
