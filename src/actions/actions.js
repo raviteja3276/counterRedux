@@ -1,5 +1,5 @@
 import { type } from "@testing-library/user-event/dist/type";
-import { ADD_TO_CARD, DECREMENT, DECREMENT_BY, INCREMENT, INCREMENT_BY, REMOVE_FROM_CARD } from "./ActionType";
+import { ADD_TO_CARD, DECREASE_BY, DECREMENT, DECREMENT_BY, INCREASE_BY, INCREMENT, INCREMENT_BY, REMOVE_ALL_CART, REMOVE_FROM_CARD } from "./ActionType";
 import { product } from "../product";
 
 export function increment(){
@@ -39,5 +39,26 @@ export function decrement(){
    return{
       type: REMOVE_FROM_CARD,
       payload: product
+   }
+  }
+
+  export function decreaseCartBy(product){
+   return{
+      type: DECREASE_BY,
+      payload: product
+   }
+  }
+
+  export function increaseCartBy(product){
+   return{
+      type: INCREASE_BY,
+      payload: product
+   }
+  }
+
+  export function removeAllCart(){
+   return{
+      type: REMOVE_ALL_CART,
+      payload: []
    }
   }

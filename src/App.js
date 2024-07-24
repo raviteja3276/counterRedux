@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 function App() {
   // const[count,setCount]=useState(0)
   const navigate = useNavigate()
-  const products = useSelector(state => state.products)
+  const products = useSelector(state => state.product.products)
   const dispatch = useDispatch()
   const addProductToCart=(product)=>{
     dispatch(addToCart(product))
@@ -16,7 +16,9 @@ function App() {
     <>
     <div className='header'>
     <h1>shopping application</h1>
-    <button onClick={()=>navigate('/cart')}>Cart ({products.length})</button>
+    <button onClick={()=>navigate('/cart')}>Cart ({
+    products.reduce((acc,curr)=> acc+ curr.quantity,0)
+    })</button>
     </div>
     <div className='productList'>
       {
